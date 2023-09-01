@@ -16,6 +16,7 @@ namespace MyToDoApp.ViewModels
         {
             TaskBars = new ObservableCollection<TaskBar>();
             CreateTaskBars();
+            CreateTestData();
         }
 
         private ObservableCollection<TaskBar> taskBars;
@@ -23,7 +24,23 @@ namespace MyToDoApp.ViewModels
         public ObservableCollection<TaskBar> TaskBars
         {
             get { return taskBars; }
-            set { taskBars = value; } 
+            set { taskBars = value; }
+        }
+
+        private ObservableCollection<ToDoDto> todoDtos;
+
+        public ObservableCollection<ToDoDto> ToDoDtos
+        {
+            get { return todoDtos; }
+            set { todoDtos = value; }
+        }
+
+        private ObservableCollection<MemoDto> memoDtos;
+
+        public ObservableCollection<MemoDto> MemoDtos
+        {
+            get { return memoDtos; }
+            set { memoDtos = value; }
         }
 
         void CreateTaskBars()
@@ -62,5 +79,16 @@ namespace MyToDoApp.ViewModels
             });
         }
 
+
+        void CreateTestData()
+        {
+            ToDoDtos = new ObservableCollection<ToDoDto>();
+            MemoDtos = new ObservableCollection<MemoDto>();
+            for (int i = 0; i < 10; i++)
+            {
+                ToDoDtos.Add(new ToDoDto() { Title = "待办" + i, Content = "正在处理中..." });
+                memoDtos.Add(new MemoDto() { Title = "备忘" + i, Content = "我的世界" });
+            }
+        }
     }
 }

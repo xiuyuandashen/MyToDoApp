@@ -119,5 +119,26 @@ namespace MyToDoApp.Views
             if (e.LeftButton == MouseButtonState.Pressed)
                 this.DragMove();
         }
+
+        /// <summary>
+        /// 当鼠标划入主题按钮时候改变鼠标样式为手指
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void themeButtonMouseEnter(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        /// <summary>
+        /// 当鼠标划出主题按钮时候改变鼠标样式为箭头
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void themeButtonMouseLeave(object sender, MouseEventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+
+        }
     }
 }

@@ -72,17 +72,17 @@
                 <!--  左侧弹出层  -->
                 <materialDesign:DrawerHost.LeftDrawerContent>
                     <DockPanel MinWidth="220">
-                        <!--<ToggleButton
+                        <ToggleButton
                             Margin="16"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
                             DockPanel.Dock="Top"
                             IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}"
-                            Style="{StaticResource MaterialDesignHamburgerToggleButton}" />-->
-                        <StackPanel Margin="0,20,10,0" DockPanel.Dock="Top">
+                            Style="{StaticResource MaterialDesignHamburgerToggleButton}" />
+                        <StackPanel Margin="0,10,10,0" DockPanel.Dock="Top">
                             <Image
-                                Width="50"
-                                Height="50"
+                                Width="55"
+                                Height="55"
                                 Source="/Images/user.jpg">
                                 <Image.Clip>
                                     <EllipseGeometry
@@ -181,7 +181,12 @@
                                     HorizontalAlignment="Center"
                                     Orientation="Horizontal">
                                     <TextBlock Margin="0,0,10,0" Text="Light" />
-                                    <ToggleButton x:Name="DarkModeToggleButton" Click="MenuDarkModeButton_Click" />
+                                    <!--  设置鼠标划入样式  -->
+                                    <ToggleButton
+                                        x:Name="DarkModeToggleButton"
+                                        Click="MenuDarkModeButton_Click"
+                                        MouseEnter="themeButtonMouseEnter"
+                                        MouseLeave="themeButtonMouseLeave" />
                                     <TextBlock Margin="10,0,0,0" Text="Dark" />
                                 </StackPanel>
 
