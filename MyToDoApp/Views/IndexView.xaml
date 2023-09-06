@@ -57,7 +57,6 @@
                                     <materialDesign:PackIcon
                                         Width="30"
                                         Height="30"
-                                        Margin="15,0"
                                         VerticalAlignment="Center"
                                         Kind="{Binding Icon}" />
                                     <TextBlock
@@ -126,19 +125,26 @@
                         </Button>
                     </DockPanel>
                     <!--  ScrollViewer.VerticalScrollBarVisibility="Hidden" 隐藏纵向滚动条  -->
-                    <ListBox ItemsSource="{Binding ToDoDtos}" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <ListBox
+                        HorizontalContentAlignment="Stretch"
+                        ItemsSource="{Binding ToDoDtos}"
+                        ScrollViewer.VerticalScrollBarVisibility="Hidden">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel MaxHeight="80">
-                                    <TextBlock
-                                        FontSize="16"
-                                        FontWeight="Bold"
-                                        Text="{Binding Title}" />
-                                    <TextBlock
-                                        Margin="0,5"
-                                        Opacity="0.5"
-                                        Text="{Binding Content}" />
-                                </StackPanel>
+                                <DockPanel MaxHeight="80" LastChildFill="False">
+                                    <ToggleButton DockPanel.Dock="Right" />
+                                    <StackPanel>
+                                        <TextBlock
+                                            FontSize="16"
+                                            FontWeight="Bold"
+                                            Text="{Binding Title}" />
+                                        <TextBlock
+                                            Margin="0,5"
+                                            Opacity="0.5"
+                                            Text="{Binding Content}" />
+                                    </StackPanel>
+                                </DockPanel>
+
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
