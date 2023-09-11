@@ -1,0 +1,9 @@
+2023-09-11 17:47:30,028 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-11 17:47:30,036 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-11 17:47:30,036 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-11 17:47:30,036 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-11 17:47:37,530 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [u].[Id], [u].[Account], [u].[CreateDate], [u].[PassWord], [u].[UpdateDate], [u].[UserName]
+FROM [User] AS [u]
+ORDER BY [u].[UpdateDate] DESC
+2023-09-11 17:47:37,555 [17] INFO  MyToDoApp.Api.Controllers.WeatherForecastController - 查询所有用户

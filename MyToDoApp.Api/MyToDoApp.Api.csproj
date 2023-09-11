@@ -7,7 +7,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20230908071520_Initial.cs" />
+    <Compile Remove="Migrations\20230908071520_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20230908072824_updateId.cs" />
+    <Compile Remove="Migrations\20230908072824_updateId.Designer.cs" />
+    <Compile Remove="Migrations\20230908074307_AddToDoModel.cs" />
+    <Compile Remove="Migrations\20230908074307_AddToDoModel.Designer.cs" />
+    <Compile Remove="Migrations\MyToDoContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.AutoHistory" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="6.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyToDoApp.Shared\MyToDoApp.Shared.csproj" />
   </ItemGroup>
 
 </Project>

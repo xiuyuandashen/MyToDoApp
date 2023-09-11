@@ -47,6 +47,8 @@ namespace MyToDoApp.ViewModels
             RegionManager = regionManager;
         }
 
+
+
         private void Navigate(MenuBar obj)
         {
             if (obj == null || string.IsNullOrWhiteSpace(obj.NameSpace))

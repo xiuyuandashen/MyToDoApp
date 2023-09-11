@@ -12,7 +12,7 @@
     prism:ViewModelLocator.AutoWireViewModel="True"
     AllowsTransparency="True"
     Background="{DynamicResource MaterialDesignPaper}"
-    FontFamily="{materialDesign:MaterialDesignFont}"
+    FontFamily="微软雅黑"
     TextElement.FontSize="13"
     TextElement.FontWeight="Regular"
     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -26,37 +26,7 @@
         <WindowChrome CaptionHeight="0" ResizeBorderThickness="20" />
     </WindowChrome.WindowChrome>
 
-    <Window.Resources>
-        <Style x:Key="MyListBoxItemStyle" TargetType="ListBoxItem">
-            <Setter Property="MinHeight" Value="40" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                        <Grid>
-                            <Border x:Name="borderHeader" />
-                            <Border x:Name="border" />
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" />
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-                            <!--  选中Item时的触发器效果  -->
-                            <Trigger Property="IsSelected" Value="True">
-                                <Setter TargetName="borderHeader" Property="BorderThickness" Value="4,0,0,0" />
-                                <Setter TargetName="borderHeader" Property="BorderBrush" Value="{DynamicResource PrimaryHueLightBrush}" />
-                                <Setter TargetName="border" Property="Background" Value="{DynamicResource PrimaryHueLightBrush}" />
-                                <Setter TargetName="border" Property="Opacity" Value="0.2" />
-                            </Trigger>
-                            <!--  鼠标划过Item时的效果  -->
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="{DynamicResource PrimaryHueLightBrush}" />
-                                <Setter TargetName="border" Property="Opacity" Value="0.2" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
+    <Window.Resources />
 
 
     <Grid>
@@ -176,19 +146,22 @@
                             <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
 
                                 <!--  切换主题  -->
+                                <!--
                                 <StackPanel
                                     Margin="10"
                                     HorizontalAlignment="Center"
                                     Orientation="Horizontal">
                                     <TextBlock Margin="0,0,10,0" Text="Light" />
-                                    <!--  设置鼠标划入样式  -->
+                                -->
+                                <!--  设置鼠标划入样式  -->
+                                <!--
                                     <ToggleButton
                                         x:Name="DarkModeToggleButton"
                                         Click="MenuDarkModeButton_Click"
                                         MouseEnter="themeButtonMouseEnter"
                                         MouseLeave="themeButtonMouseLeave" />
                                     <TextBlock Margin="10,0,0,0" Text="Dark" />
-                                </StackPanel>
+                                </StackPanel>-->
 
                                 <!--  头像以及最大化最小化窗口等  -->
                                 <Image
