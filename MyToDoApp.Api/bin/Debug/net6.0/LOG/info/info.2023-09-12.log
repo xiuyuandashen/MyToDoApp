@@ -1,0 +1,70 @@
+2023-09-12 17:05:10,674 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-12 17:05:10,682 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-12 17:05:10,682 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-12 17:05:10,682 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-12 17:05:20,305 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (45ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE [t].[Id] = @__id_0
+2023-09-12 17:05:30,086 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE [t].[Id] = @__id_0
+2023-09-12 17:05:33,544 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE [t].[Id] = @__id_0
+2023-09-12 17:05:34,044 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE [t].[Id] = @__id_0
+2023-09-12 17:05:34,240 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE [t].[Id] = @__id_0
+2023-09-12 17:05:35,970 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE [t].[Id] = @__id_0
+2023-09-12 17:06:32,457 [23] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (Size = 20), @p4='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ToDo] ([Content], [CreateDate], [Status], [Title], [UpdateDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-09-12 17:07:01,372 [28] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (27ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE [t].[Id] = @__id_0
+2023-09-12 17:07:49,934 [27] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (17ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+2023-09-12 17:08:00,469 [27] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+2023-09-12 17:08:07,148 [27] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+2023-09-12 17:08:12,834 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+2023-09-12 17:08:12,836 [29] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE 0 = 1
+2023-09-12 17:08:25,850 [29] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+2023-09-12 17:23:07,037 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-12 17:23:07,063 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-12 17:23:07,077 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-12 17:23:07,083 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-12 17:23:34,257 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (80ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1

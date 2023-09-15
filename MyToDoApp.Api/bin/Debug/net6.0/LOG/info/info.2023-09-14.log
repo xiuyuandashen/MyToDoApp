@@ -1,0 +1,106 @@
+2023-09-14 11:39:38,106 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 11:39:38,114 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 11:39:38,115 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 11:39:38,115 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-14 11:39:59,814 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (43ms) [Parameters=[@__query_Search_0='?' (Size = 20)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE (@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0
+2023-09-14 11:39:59,870 [17] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE (@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0
+ORDER BY [t].[CreateDate] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-14 11:40:44,634 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 11:40:44,643 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 11:40:44,644 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 11:40:44,644 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-14 11:41:02,907 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (34ms) [Parameters=[@__query_Search_0='?' (Size = 20)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE (@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0
+2023-09-14 11:41:02,958 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE (@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0
+ORDER BY [t].[CreateDate] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2023-09-14 11:41:48,111 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 11:41:48,119 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 11:41:48,120 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 11:41:48,120 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-14 11:42:08,552 [7] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (45ms) [Parameters=[@__query_Search_0='?' (Size = 20)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE (@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0
+2023-09-14 11:42:08,608 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE (@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0
+ORDER BY [t].[CreateDate] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2023-09-14 11:52:30,946 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 11:52:30,968 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 11:52:30,971 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 11:52:30,974 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-14 11:52:52,358 [8] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (73ms) [Parameters=[@__query_Search_0='?' (Size = 20)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE (@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0
+2023-09-14 11:52:52,468 [3] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE (@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0
+ORDER BY [t].[CreateDate] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2023-09-14 15:35:07,670 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 15:35:07,682 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 15:35:07,683 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 15:35:07,683 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-14 15:36:24,138 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 15:36:24,147 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 15:36:24,148 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 15:36:24,148 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-14 15:36:44,471 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 15:36:44,479 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 15:36:44,479 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 15:36:44,479 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-14 15:37:10,609 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 15:37:10,617 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 15:37:10,618 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 15:37:10,618 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-14 15:37:27,031 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (61ms) [Parameters=[@p0='?' (Size = 255), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Memo] ([Content], [CreateDate], [Title], [UpdateDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2023-09-14 15:37:37,559 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Content], [m].[CreateDate], [m].[Title], [m].[UpdateDate]
+FROM [Memo] AS [m]
+WHERE [m].[Id] = @__id_0
+2023-09-14 15:37:51,727 [22] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__parameter_Search_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Memo] AS [m]
+WHERE (@__parameter_Search_0 LIKE N'') OR CHARINDEX(@__parameter_Search_0, [m].[Title]) > 0
+2023-09-14 15:37:51,737 [22] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__parameter_Search_0='?' (Size = 100), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[Content], [m].[CreateDate], [m].[Title], [m].[UpdateDate]
+FROM [Memo] AS [m]
+WHERE (@__parameter_Search_0 LIKE N'') OR CHARINDEX(@__parameter_Search_0, [m].[Title]) > 0
+ORDER BY [m].[CreateDate] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2023-09-14 15:37:55,231 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__parameter_Search_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Memo] AS [m]
+WHERE (@__parameter_Search_0 LIKE N'') OR CHARINDEX(@__parameter_Search_0, [m].[Title]) > 0
+2023-09-14 15:37:55,237 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__parameter_Search_0='?' (Size = 100), @__p_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[Content], [m].[CreateDate], [m].[Title], [m].[UpdateDate]
+FROM [Memo] AS [m]
+WHERE (@__parameter_Search_0 LIKE N'') OR CHARINDEX(@__parameter_Search_0, [m].[Title]) > 0
+ORDER BY [m].[CreateDate] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-09-14 15:38:19,512 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-14 15:38:19,521 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-14 15:38:19,522 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-14 15:38:19,522 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\

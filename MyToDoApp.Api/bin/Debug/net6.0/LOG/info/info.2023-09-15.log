@@ -1,0 +1,26 @@
+2023-09-15 17:43:04,082 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-15 17:43:04,090 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-15 17:43:04,090 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-15 17:43:04,090 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-15 17:44:02,133 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-15 17:44:02,142 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-15 17:44:02,143 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-15 17:44:02,143 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-15 17:44:37,964 [21] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (75ms) [Parameters=[@__model_Account_0='?' (Size = 20)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Account], [u].[CreateDate], [u].[PassWord], [u].[UpdateDate], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Account] = @__model_Account_0
+2023-09-15 17:44:38,141 [21] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (17ms) [Parameters=[@p0='?' (Size = 20), @p1='?' (DbType = DateTime2), @p2='?' (Size = 128), @p3='?' (DbType = DateTime2), @p4='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [User] ([Account], [CreateDate], [PassWord], [UpdateDate], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2023-09-15 17:45:46,962 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-15 17:45:46,970 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-15 17:45:46,971 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-15 17:45:46,971 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-15 17:46:29,911 [20] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (45ms) [Parameters=[@__Account_0='?' (Size = 20), @__Password_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Account], [u].[CreateDate], [u].[PassWord], [u].[UpdateDate], [u].[UserName]
+FROM [User] AS [u]
+WHERE [u].[Account] = @__Account_0 AND [u].[PassWord] = @__Password_1

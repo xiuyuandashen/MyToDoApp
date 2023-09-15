@@ -1,9 +1,12 @@
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using MyToDo.Api;
+using MyToDoApp.Api.Extensions;
 using MyToDoApp.Api.Model;
 using MyToDoApp.Api.Model.Repository;
+using MyToDoApp.Api.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +26,7 @@ builder.Services.AddLogging(cfg =>
     //});
 });
 #endregion
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -42,6 +46,20 @@ builder.Services.AddCustomRepository<ToDo, ToDoRepository>();
 builder.Services.AddCustomRepository<User, UserRepository>();
 builder.Services.AddCustomRepository<Memo, MemoRepository>();
 #endregion
+
+
+#region ×¢²áAutoMapper
+var autoMapperConfiguration = new MapperConfiguration(config =>
+{
+    config.AddProfile(new AutoMapperProFile());
+});
+
+builder.Services.AddSingleton(autoMapperConfiguration.CreateMapper());
+#endregion
+
+builder.Services.AddTransient<IToDoService, ToDoService>();
+builder.Services.AddTransient<IMemoService, MemoService>();
+builder.Services.AddTransient<ILoginService, LoginService>();
 var app = builder.Build();
 
 

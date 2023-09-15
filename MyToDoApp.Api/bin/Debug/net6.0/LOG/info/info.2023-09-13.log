@@ -1,0 +1,24 @@
+2023-09-13 10:25:57,767 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5169
+2023-09-13 10:25:57,775 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2023-09-13 10:25:57,775 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2023-09-13 10:25:57,775 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: F:\code\MyToDoApp\MyToDoApp.Api\
+2023-09-13 10:26:14,305 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (44ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+2023-09-13 10:26:14,381 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+ORDER BY [t].[CreateDate] DESC
+OFFSET @__p_2 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2023-09-13 10:26:22,518 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+2023-09-13 10:26:22,526 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__query_Search_0='?' (Size = 20), @__query_Status_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [t].[Id], [t].[Content], [t].[CreateDate], [t].[Status], [t].[Title], [t].[UpdateDate]
+FROM [ToDo] AS [t]
+WHERE ((@__query_Search_0 LIKE N'') OR CHARINDEX(@__query_Search_0, [t].[Title]) > 0) AND [t].[Status] = @__query_Status_1
+ORDER BY [t].[CreateDate] DESC
+OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY

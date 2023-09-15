@@ -123,3 +123,4 @@ F:\code\MyToDoApp\MyToDoApp.Api\bin\Debug\net6.0\MyToDoApp.Shared.pdb
 F:\code\MyToDoApp\MyToDoApp.Api\bin\Debug\net6.0\log4net.config
 F:\code\MyToDoApp\MyToDoApp.Api\bin\Debug\net6.0\log4net.dll
 F:\code\MyToDoApp\MyToDoApp.Api\bin\Debug\net6.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+F:\code\MyToDoApp\MyToDoApp.Api\bin\Debug\net6.0\AutoMapper.dll
