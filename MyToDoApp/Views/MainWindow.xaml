@@ -31,10 +31,11 @@
 
     <Grid>
         <materialDesign:DialogHost
+            x:Name="DialogHost"
             DialogTheme="Inherit"
             Identifier="Root"
             SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
-            <!--  顶部菜单栏  -->
+
             <materialDesign:DrawerHost
                 x:Name="TopMenuBar"
                 IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}"
@@ -100,6 +101,7 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
+                    <!--  顶部菜单栏  -->
                     <materialDesign:ColorZone
                         x:Name="ColorZone"
                         Padding="16"

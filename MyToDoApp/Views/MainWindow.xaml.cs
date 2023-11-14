@@ -1,4 +1,6 @@
 ﻿using MaterialDesignThemes.Wpf;
+using MyToDoApp.Extensions;
+using Prism.Events;
 using System.Windows;
 using System.Windows.Input;
 
@@ -9,13 +11,20 @@ namespace MyToDoApp.Views
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(IEventAggregator aggregator)
         {
             InitializeComponent();
+            //注册等待消息窗口
+            aggregator.Resgiter(arg =>
+            {
+                DialogHost.IsOpen = arg.IsOpen;
+
+                // 如果打开的话
+                if (DialogHost.IsOpen)
+                    // loading
+                    DialogHost.DialogContent = new ProgressView();
+            });
         }
-
-       
-
 
         private bool isMaximized = false;
         private double restoreTop;

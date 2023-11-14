@@ -35,5 +35,37 @@ namespace MyToDoApp.Api.Controllers
 
         [HttpDelete]
         public async Task<ApiResponse> Delete(int id) => await Service.DeleteAsync(id);
+
+
+        /// <summary>
+        /// 获取FormData类型的请求数据
+        /// </summary>
+        /// <param name="formData"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<ApiResponse> Test([FromForm] FormData formData)
+        {
+
+            string Name = formData.Name;
+            var files = formData.Files;
+
+
+            return new ApiResponse("上传成功！");
+
+        }
+
+
+        
+    }
+
+    public class FormData{
+
+        public string Name { get; set; }
+
+        /// <summary>
+        /// 文件都是上传到这
+        /// </summary>
+        public List<IFormFile> ? Files { get; set; }
+
     }
 }

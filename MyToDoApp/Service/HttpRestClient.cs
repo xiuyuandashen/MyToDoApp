@@ -29,7 +29,8 @@ namespace MyToDoApp.Service
             request.AddHeader("Content-Type", baseRequest.ContentType);
 
             if (baseRequest.Parameter != null)
-                request.AddParameter("param", JsonConvert.SerializeObject(baseRequest.Parameter), ParameterType.RequestBody);
+                //request.AddParameter("param", JsonConvert.SerializeObject(baseRequest.Parameter), ParameterType.RequestBody);
+                request.AddBody(baseRequest.Parameter);
             var response = await client.ExecuteAsync(request);
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 return JsonConvert.DeserializeObject<ApiResponse>(response.Content);
@@ -49,7 +50,8 @@ namespace MyToDoApp.Service
             request.AddHeader("Content-Type", baseRequest.ContentType);
 
             if (baseRequest.Parameter != null)
-                request.AddParameter("param", JsonConvert.SerializeObject(baseRequest.Parameter), ParameterType.RequestBody);
+                //request.AddParameter("param", JsonConvert.SerializeObject(baseRequest.Parameter), ParameterType.RequestBody);
+                request.AddBody(baseRequest.Parameter);
             var response = await client.ExecuteAsync(request);
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 return JsonConvert.DeserializeObject<ApiResponse<T>>(response.Content);

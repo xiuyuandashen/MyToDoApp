@@ -26,5 +26,11 @@ namespace MyToDo.Shared.Dtos
             get { return content; }
             set { content = value; OnPropertyChanged(); }
         }
+
+        public int Status
+        {
+            get { return status; }
+            set { status = value; OnPropertyChanged(); }
+        }
     }
 }
